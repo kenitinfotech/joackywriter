@@ -738,9 +738,6 @@ class NewChoiceVC: UIViewController {
         case 31:
             tempString = strkeyboardType + btnL.titleLabel!.text!
             break
-            
-            
-            
         case 32:
             tempString = strkeyboardType + btnZ.titleLabel!.text!
             break

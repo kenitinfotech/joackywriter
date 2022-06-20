@@ -12,7 +12,6 @@ import WatchConnectivity
 
 class AddChoiceVC: UIViewController {
 
-    
     @IBOutlet weak var vwImageBg: UIView!
     @IBOutlet weak var vwBgImg: UIImageView!
     @IBOutlet weak var imgVw: UIImageView!
@@ -30,6 +29,10 @@ class AddChoiceVC: UIViewController {
     @IBOutlet weak var btnPlay: UIButton!
     @IBOutlet weak var btnRecord: UIButton!
     @IBOutlet weak var btnDeleteRecord: UIButton!
+    
+    @IBOutlet weak var btnAddToiWatch: UIButton!
+    @IBOutlet weak var btnAddToBoth: UIButton!
+    @IBOutlet weak var vwStackAddToiWatch: UIView!
     var isSaved = false
     var audioURL : URL?
     
@@ -86,6 +89,7 @@ class AddChoiceVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        vwStackAddToiWatch.isHidden = true
         tfCaption.addTarget(self, action: #selector(self.textFieldDidChange), for: .editingChanged)
         
         if selectedChoice != nil {
@@ -125,10 +129,15 @@ class AddChoiceVC: UIViewController {
             }
         }
         
+
+        
         if WCSession.isSupported() {
             self.session = WCSession.default
             self.session.delegate = self
             self.session.activate()
+            if !isCategory {
+                vwStackAddToiWatch.isHidden = false
+            }
         }
 
        
@@ -167,6 +176,25 @@ class AddChoiceVC: UIViewController {
 //MARK:- UIButton Actions
 
 extension AddChoiceVC {
+    
+    
+    
+    @IBAction func btnAddToiWatch(_ sender: Any) {
+        
+        if btnAddToBoth.isSelected {
+            btnAddToBoth.isSelected = false
+        }
+        btnAddToiWatch.isSelected.toggle()
+    }
+    
+    @IBAction func btnAddToBoth(_ sender: Any) {
+        
+        if btnAddToiWatch.isSelected {
+            btnAddToiWatch.isSelected = false
+        }
+        btnAddToBoth.isSelected.toggle()
+        
+    }
     
     @IBAction func btnDeleteRecording(_ sender: Any) {
         
@@ -249,13 +277,11 @@ extension AddChoiceVC {
         guard let observations = reqeust.results as? [VNRecognizedTextObservation] else {return}
         
         let recognizedStrings = observations.compactMap { observation in
-            
-            
+        
             return observation.topCandidates(1).first?.string
-            
-            
         }
         isImageHasText = 1
+        self.lblCaption.text = recognizedStrings.first
         self.tfCaption.text = recognizedStrings.first
     }
     
@@ -268,39 +294,82 @@ extension AddChoiceVC {
     
     @IBAction func btnSavePressed(_ sender: Any) {
         
-        let imgData = imgVw.image?.jpegData(compressionQuality: 1)
         
-        let Size = Float(Double(imgData!.count)/1024)
-        
-        var tempImg = imgVw.image
-        
-        if imgVw.image!.size.width > 200.0 && Size >= 60.0 {
+        if tfCaption.text!.isEmpty {
             
-            if let compressed = imgVw.image!.resized(toWidth: 400.0) {
-               tempImg = compressed
+            return
+        }
+        
+        if imgVw.image == nil {
+            return
+        }
+        
+        
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            
+            
+            if btnAddToiWatch.isSelected || btnAddToBoth.isSelected {
+                
+                let imgData = imgVw.image?.jpegData(compressionQuality: 1)
+                
+                let Size = Float(Double(imgData!.count)/1024)
+                
+                //var tempImg = imgVw.image
+                
+                if Size >= 62.0 {
+                    
+                    ImageCompressor.compress(image: imgVw.image!, maxByte: 63000) { [weak self] image in
+                                guard let compressedImage = image else { return }
+                        
+                        
+                        var data = compressedImage.jpegData(compressionQuality: 1.0)
+                        if data!.count > 63000 {
+                            data = compressedImage.jpegData(compressionQuality: 0.8)
+                        }
+                               
+                        print("compressedImage Data: \(data!.count)")
+                        
+                        DispatchQueue.main.async {
+                            
+                            self!.session.sendMessage(["a": self!.tfCaption.text!], replyHandler: nil) { error in
+                                debugPrint("Error getting while sending Message from iPhone to iWatch -- \(error.localizedDescription)")
+                            }
+                            
+                            self!.session.sendMessageData(data!, replyHandler: nil) { erro in
+
+                                debugPrint("Error ---- \(erro.localizedDescription)")
+                            }
+                        }
+                        
+                                // Use compressedImage
+                            }
+                } else {
+                    session.sendMessage(["a": tfCaption.text!], replyHandler: nil) { error in
+                        debugPrint("Error getting while sending Message from iPhone to iWatch -- \(error.localizedDescription)")
+                    }
+                    
+                    session.sendMessageData(imgData!, replyHandler: nil) { erro in
+
+                        debugPrint("Error ---- \(erro.localizedDescription)")
+                    }
+                }
+                
+               
+                
+//                if imgVw.image!.size.width >= 300.0 && Size >= 62.0 {
+//
+//                    if let compressed = imgVw.image!.resized(toWidth: 280.0) {
+//                       tempImg = compressed
+//                    }
+//                }
+               
+            }
+            
+            if btnAddToiWatch.isSelected {
+                return
             }
         }
-        
-//        do {
-//            try session.updateApplicationContext(["imgData": tempImg?.jpegData(compressionQuality: 1.0)! as Any])
-//        } catch let err {
-//            debugPrint("Error ----- \(err.localizedDescription)")
-//        }
-        
-        
-        
-        
-        session.sendMessage(["a": tfCaption.text!], replyHandler: nil) { error in
-            debugPrint("Error getting while sending Message from iPhone to iWatch -- \(error.localizedDescription)")
-        }
-        
-        
-        
-        
-        session.sendMessageData((tempImg?.jpegData(compressionQuality: 1))!, replyHandler: nil) { erro in
 
-            debugPrint("Error ---- \(erro.localizedDescription)")
-        }
         
        // session.transferFile(imgURL!, metadata: nil)
        // return
@@ -486,9 +555,14 @@ extension AddChoiceVC: WCSessionDelegate {
         
         let msg = message["b"] as? String
        
-        DispatchQueue.main.async {
-            
-            Toast.show(message: msg!, controller: self)
+        DispatchQueue.main.async { [weak self] in
+            self!.imgVw.image = nil
+            self!.tfCaption.text = ""
+            self!.tfMoreWords.text = ""
+            self!.tfWorkType.text = ""
+            self!.lblCaption.text = ""
+            self!.vwBgImg.backgroundColor = .lightGray
+            Toast.show(message: msg!, controller: self!)
         }
         
     }
@@ -505,4 +579,46 @@ extension AddChoiceVC: WCSessionDelegate {
     }
     
     
+}
+
+
+struct ImageCompressor {
+    static func compress(image: UIImage, maxByte: Int,
+                         completion: @escaping (UIImage?) -> ()) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            guard let currentImageSize = image.jpegData(compressionQuality: 1.0)?.count else {
+                return completion(nil)
+            }
+        
+            var iterationImage: UIImage? = image
+            var iterationImageSize = currentImageSize
+            var iterationCompression: CGFloat = 1.0
+        
+            while iterationImageSize > maxByte && iterationCompression > 0.01 {
+                let percantageDecrease = getPercantageToDecreaseTo(forDataCount: iterationImageSize)
+            
+                let canvasSize = CGSize(width: image.size.width * iterationCompression,
+                                        height: image.size.height * iterationCompression)
+                UIGraphicsBeginImageContextWithOptions(canvasSize, false, image.scale)
+                defer { UIGraphicsEndImageContext() }
+                image.draw(in: CGRect(origin: .zero, size: canvasSize))
+                iterationImage = UIGraphicsGetImageFromCurrentImageContext()
+            
+                guard let newImageSize = iterationImage?.jpegData(compressionQuality: 1.0)?.count else {
+                    return completion(nil)
+                }
+                iterationImageSize = newImageSize
+                iterationCompression -= percantageDecrease
+            }
+            completion(iterationImage)
+        }
+    }
+
+    private static func getPercantageToDecreaseTo(forDataCount dataCount: Int) -> CGFloat {
+        switch dataCount {
+        case 0..<3000000: return 0.05
+        case 3000000..<10000000: return 0.1
+        default: return 0.2
+        }
+    }
 }

@@ -28,7 +28,7 @@ class SelectedChoiceCell: UICollectionViewCell {
             } else {
                 lblChoice.font = UIFont.systemFont(ofSize: 17,weight: .regular)
                 imgChoice.isHidden = false
-                let img = APPDELEGATE.loadImageFromDocumentDirectory(nameOfImage: model.strImageName)
+                guard let img = APPDELEGATE.loadImageFromDocumentDirectory(nameOfImage: model.strImageName) else {return}
                 imgChoice.image = img
             }
             

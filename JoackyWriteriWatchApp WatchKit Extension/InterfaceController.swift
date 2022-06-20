@@ -29,13 +29,25 @@ class InterfaceController: WKInterfaceController {
             self.session.delegate = self;
             self.session.activate()
         }
+        
+        do {
+                    try AVAudioSession.sharedInstance().setActive(false)
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord, options: [.mixWithOthers])
+                    try AVAudioSession.sharedInstance().setActive(true)
+               }
+               catch{
+                 print("Error setting up AVAudioSession category")
+               }
         // img.setImage(UIImage(named: "ic_help"))
         
         if (UserDefaults.standard.object(forKey: "data") != nil) {
             
             data = UserDefaults.standard.stringArray(forKey: "data")!
-            img.setImage(getImage(imgNm: "\(data[0].replacingOccurrences(of: " ", with: "_")).png"))
-            lbl.setText(data[0])
+            if data.count > 0 {
+                img.setImage(getImage(imgNm: "\(data[0].replacingOccurrences(of: " ", with: "_")).png"))
+                lbl.setText(data[0])
+            }
+           
         }
     }
     
@@ -133,6 +145,8 @@ class InterfaceController: WKInterfaceController {
                 
                 if self!.data.count == 0 {
                     self!.lbl.setText("Please Add Choice")
+                    
+                    self!.img.setImageNamed("ic_joackyWriter")
                     return
                 }
                 if self!.count == self!.data.count - 1 {
@@ -157,6 +171,8 @@ class InterfaceController: WKInterfaceController {
         lbl.setText(data[count])
         if let img = getImage(imgNm: "\(data[count].replacingOccurrences(of: " ", with: "_")).png") {
             self.img.setImage(img)
+        } else {
+            self.img.setImage(nil)
         }
     }
     
@@ -238,6 +254,7 @@ extension InterfaceController: WCSessionDelegate {
         UserDefaults.standard.set(data, forKey: "data")
         UserDefaults.standard.synchronize()
         lbl.setText(msg)
+        img.setImage(nil)
         sendMessage()
     }
     

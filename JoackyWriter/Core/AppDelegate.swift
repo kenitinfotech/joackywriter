@@ -115,7 +115,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVSpeechSynthesizerDelega
     }
 
 
-    func loadImageFromDocumentDirectory(nameOfImage : String) -> UIImage {
+    func loadImageFromDocumentDirectory(nameOfImage : String) -> UIImage? {
         let nsDocumentDirectory = FileManager.SearchPathDirectory.documentDirectory
         let nsUserDomainMask = FileManager.SearchPathDomainMask.userDomainMask
         let paths = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true)
@@ -124,7 +124,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVSpeechSynthesizerDelega
             let image    = UIImage(contentsOfFile: imageURL.path)
             return image!
         }
-        return #imageLiteral(resourceName: "no-image")
+        return nil
     }
     
     

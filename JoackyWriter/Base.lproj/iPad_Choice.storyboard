@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="voq-WX-O25">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="voq-WX-O25">
     <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -318,16 +318,69 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="olz-l6-vE0">
+                                                <rect key="frame" x="20" y="656" width="368.5" height="72"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BOo-77-6wN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="368.5" height="30"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mi6-zB-qfB">
+                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="30" id="0UU-XE-yW4"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="Ez2-xm-SkA"/>
+                                                                </constraints>
+                                                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" image="ic_unchecked">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <state key="selected" image="ic_checked"/>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add To iWatch Too" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GG0-bg-8nA">
+                                                                <rect key="frame" x="38" y="0.0" width="330.5" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Mq3-Vt-8kD">
+                                                        <rect key="frame" x="0.0" y="42" width="368.5" height="30"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vaa-Ke-cJt">
+                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="6CM-zP-teh"/>
+                                                                    <constraint firstAttribute="width" constant="30" id="rjQ-dN-5JS"/>
+                                                                </constraints>
+                                                                <state key="normal" image="ic_unchecked">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <state key="selected" image="ic_checked"/>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add To Both iWatch as well as App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exQ-lr-80k">
+                                                                <rect key="frame" x="38" y="0.0" width="330.5" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="uhv-gH-Zpx" firstAttribute="bottom" secondItem="fo6-hG-ilr" secondAttribute="bottom" constant="21" id="6aP-0b-Zx3"/>
+                                            <constraint firstAttribute="bottom" secondItem="olz-l6-vE0" secondAttribute="bottom" constant="20" id="BcU-1T-6PB"/>
                                             <constraint firstItem="stB-0v-2Id" firstAttribute="top" secondItem="fo6-hG-ilr" secondAttribute="top" constant="-21" id="Bef-5a-Y5e"/>
+                                            <constraint firstItem="olz-l6-vE0" firstAttribute="leading" secondItem="g0m-Yd-fMw" secondAttribute="leading" constant="20" id="Kbs-3i-iZ8"/>
                                             <constraint firstItem="fo6-hG-ilr" firstAttribute="centerY" secondItem="g0m-Yd-fMw" secondAttribute="centerYWithinMargins" id="ULG-Dz-P4B"/>
                                             <constraint firstAttribute="bottom" secondItem="0za-lA-nCu" secondAttribute="bottom" constant="8" id="UX0-Mx-rX4"/>
                                             <constraint firstItem="fo6-hG-ilr" firstAttribute="centerX" secondItem="g0m-Yd-fMw" secondAttribute="centerX" id="Uqv-qb-5IR"/>
                                             <constraint firstItem="0za-lA-nCu" firstAttribute="top" secondItem="g0m-Yd-fMw" secondAttribute="top" constant="8" id="VDP-gt-JWr"/>
                                             <constraint firstItem="uhv-gH-Zpx" firstAttribute="trailing" secondItem="fo6-hG-ilr" secondAttribute="trailing" constant="21" id="aQO-wR-ml8"/>
+                                            <constraint firstItem="0za-lA-nCu" firstAttribute="leading" secondItem="olz-l6-vE0" secondAttribute="trailing" constant="20" id="ftI-kB-B60"/>
                                             <constraint firstItem="stB-0v-2Id" firstAttribute="leading" secondItem="fo6-hG-ilr" secondAttribute="leading" constant="-21" id="iNW-qG-z7e"/>
                                             <constraint firstAttribute="trailing" secondItem="0za-lA-nCu" secondAttribute="trailing" id="l1q-ZY-nFG"/>
                                         </constraints>
@@ -901,6 +954,8 @@
                     </view>
                     <connections>
                         <outlet property="btnAddMoreWords" destination="Vba-tW-tQt" id="UaP-gb-lvT"/>
+                        <outlet property="btnAddToBoth" destination="Vaa-Ke-cJt" id="7Ss-j0-4MT"/>
+                        <outlet property="btnAddToiWatch" destination="mi6-zB-qfB" id="DkQ-dB-2Tv"/>
                         <outlet property="btnDeleteRecord" destination="pkl-aT-h9W" id="wYa-rm-enF"/>
                         <outlet property="btnPlay" destination="UHq-nK-Hgb" id="y4X-59-0bF"/>
                         <outlet property="btnRecord" destination="ru4-Sd-rGT" id="FpU-01-bsN"/>
@@ -911,6 +966,7 @@
                         <outlet property="tfWorkType" destination="bV8-aT-SyV" id="9gm-NV-rr9"/>
                         <outlet property="vwBgImg" destination="64S-NW-uC8" id="1wA-jy-t23"/>
                         <outlet property="vwImageBg" destination="fo6-hG-ilr" id="jh7-Xq-wFv"/>
+                        <outlet property="vwStackAddToiWatch" destination="olz-l6-vE0" id="zDy-n3-bin"/>
                         <outlet property="waveformView" destination="Zkt-NG-0dV" id="TYX-nd-Bac"/>
                     </connections>
                 </viewController>
@@ -3282,8 +3338,10 @@
         <image name="edit" width="42.666667938232422" height="42.666667938232422"/>
         <image name="folder" width="170.66667175292969" height="134"/>
         <image name="home" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="ic_checked" width="170.66667175292969" height="170.66667175292969"/>
         <image name="ic_delete" width="42.666667938232422" height="42.666667938232422"/>
         <image name="ic_select" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="ic_unchecked" width="170.66667175292969" height="170.66667175292969"/>
         <image name="keyboard" width="42.666667938232422" height="42.666667938232422"/>
         <image name="pen" width="170.66667175292969" height="170.66667175292969"/>
         <image name="photo-camera" width="170.66667175292969" height="170.66667175292969"/>

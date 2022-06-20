@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -14,11 +16,11 @@
             <objects>
                 <viewController storyboardIdentifier="NewChoiceVC" id="CEp-Ns-3iL" customClass="NewChoiceVC" customModule="JoackyWriter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hi8-ab-D3w">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="haW-tx-5up">
-                                <rect key="frame" x="8" y="142" width="508" height="450"/>
+                                <rect key="frame" x="52" y="142" width="716" height="243"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="g3c-3D-jZo">
                                     <size key="itemSize" width="120" height="100"/>
@@ -41,14 +43,10 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="112" height="100"/>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="s4H-Fq-0oh">
-                                                            <rect key="frame" x="8" y="8" width="96" height="92"/>
+                                                            <rect key="frame" x="8" y="2" width="96" height="96"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="picture" translatesAutoresizingMaskIntoConstraints="NO" id="7pN-e4-4gm">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="96" height="72.5"/>
-                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VN-C1-B8u">
-                                                                    <rect key="frame" x="0.0" y="71.5" width="96" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="96" height="20.5"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="20.329999999999998" id="YjX-40-k1n"/>
                                                                     </constraints>
@@ -56,6 +54,10 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="picture" translatesAutoresizingMaskIntoConstraints="NO" id="7pN-e4-4gm">
+                                                                    <rect key="frame" x="0.0" y="19.5" width="96" height="76.5"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </stackView>
@@ -71,7 +73,7 @@
                                                     <color key="backgroundColor" systemColor="systemPinkColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="a0V-AN-84d" secondAttribute="trailing" id="5eU-lO-eJh"/>
-                                                        <constraint firstItem="s4H-Fq-0oh" firstAttribute="top" secondItem="qIN-a9-tfF" secondAttribute="top" constant="8" id="6hI-ss-a0l"/>
+                                                        <constraint firstItem="s4H-Fq-0oh" firstAttribute="top" secondItem="qIN-a9-tfF" secondAttribute="top" constant="2" id="6hI-ss-a0l"/>
                                                         <constraint firstAttribute="bottom" secondItem="a0V-AN-84d" secondAttribute="bottom" id="MU1-Hs-nlD"/>
                                                         <constraint firstItem="a0V-AN-84d" firstAttribute="leading" secondItem="qIN-a9-tfF" secondAttribute="leading" id="S5s-MT-Jca"/>
                                                         <constraint firstItem="a0V-AN-84d" firstAttribute="top" secondItem="qIN-a9-tfF" secondAttribute="top" id="aj2-Bp-elN"/>
@@ -79,7 +81,7 @@
                                                         <constraint firstAttribute="trailing" secondItem="s4H-Fq-0oh" secondAttribute="trailing" constant="8" id="cMz-w5-FoZ"/>
                                                         <constraint firstItem="s4H-Fq-0oh" firstAttribute="leading" secondItem="qIN-a9-tfF" secondAttribute="leading" constant="8" id="j6R-cq-BQQ"/>
                                                         <constraint firstItem="wDt-hP-ZVC" firstAttribute="top" secondItem="qIN-a9-tfF" secondAttribute="top" constant="8" id="khc-it-1MY"/>
-                                                        <constraint firstAttribute="bottom" secondItem="s4H-Fq-0oh" secondAttribute="bottom" id="sow-hu-d88"/>
+                                                        <constraint firstAttribute="bottom" secondItem="s4H-Fq-0oh" secondAttribute="bottom" constant="2" id="sow-hu-d88"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius1">
@@ -111,16 +113,16 @@
                                 </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGC-Pb-h6M">
-                                <rect key="frame" x="524" y="80" width="76" height="520"/>
+                                <rect key="frame" x="776" y="80" width="76" height="334"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="S03-zr-CqJ">
-                                        <rect key="frame" x="8" y="8" width="60" height="504"/>
+                                        <rect key="frame" x="8" y="8" width="60" height="318"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Cz5-YX-xkn">
-                                                <rect key="frame" x="0.0" y="0.0" width="60" height="77.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="46.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaV-AS-0J8">
-                                                        <rect key="frame" x="9" y="0.0" width="42.5" height="77.5"/>
+                                                        <rect key="frame" x="9" y="0.0" width="42.5" height="46.5"/>
                                                         <inset key="imageEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                                                         <state key="normal" image="back-arrow"/>
                                                         <connections>
@@ -136,10 +138,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8MI-P8-hhq">
-                                                <rect key="frame" x="0.0" y="85.5" width="60" height="77"/>
+                                                <rect key="frame" x="0.0" y="54.5" width="60" height="46"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8x-cr-b9F">
-                                                        <rect key="frame" x="9" y="0.0" width="42.5" height="77"/>
+                                                        <rect key="frame" x="9" y="0.0" width="42.5" height="46"/>
                                                         <inset key="imageEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                                                         <state key="normal" image="home"/>
                                                         <connections>
@@ -149,10 +151,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="s5s-Vv-5Uh">
-                                                <rect key="frame" x="0.0" y="170.5" width="60" height="77.5"/>
+                                                <rect key="frame" x="0.0" y="108.5" width="60" height="46.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOv-LN-x7F">
-                                                        <rect key="frame" x="9" y="0.0" width="42.5" height="77.5"/>
+                                                        <rect key="frame" x="9" y="0.0" width="42.5" height="46.5"/>
                                                         <inset key="imageEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
                                                         <state key="normal" image="amplifier"/>
                                                         <connections>
@@ -162,10 +164,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RtF-tC-q9B">
-                                                <rect key="frame" x="0.0" y="256" width="60" height="77.5"/>
+                                                <rect key="frame" x="0.0" y="163" width="60" height="46.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Pz-4u-oER">
-                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="77.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="46.5"/>
                                                         <inset key="imageEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                                                         <state key="normal" image="send"/>
                                                         <connections>
@@ -175,10 +177,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="irb-Qu-qin">
-                                                <rect key="frame" x="0.0" y="341.5" width="60" height="77"/>
+                                                <rect key="frame" x="0.0" y="217.5" width="60" height="46"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dh-dt-URG">
-                                                        <rect key="frame" x="9" y="0.0" width="42.5" height="77"/>
+                                                        <rect key="frame" x="9" y="0.0" width="42.5" height="46"/>
                                                         <inset key="imageEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                                                         <state key="normal" image="dashboard"/>
                                                         <connections>
@@ -188,10 +190,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7Kj-oy-yeR">
-                                                <rect key="frame" x="0.0" y="426.5" width="60" height="77.5"/>
+                                                <rect key="frame" x="0.0" y="271.5" width="60" height="46.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UH0-9f-1C2">
-                                                        <rect key="frame" x="9" y="0.0" width="42.5" height="77.5"/>
+                                                        <rect key="frame" x="9" y="0.0" width="42.5" height="46.5"/>
                                                         <color key="tintColor" red="0.0" green="0.46666666666666667" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <inset key="imageEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                                                         <state key="normal" image="edit">
@@ -216,7 +218,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAo-5w-qml" customClass="TagListView" customModule="TagListView">
-                                <rect key="frame" x="20" y="114" width="496" height="20"/>
+                                <rect key="frame" x="64" y="114" width="704" height="20"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -246,16 +248,16 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home -&gt; People" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tde-Yn-odP">
-                                <rect key="frame" x="8" y="88" width="508" height="18"/>
+                                <rect key="frame" x="52" y="88" width="716" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="textColor" systemColor="systemBlueColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8W-Tr-Ydi">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                <rect key="frame" x="44" y="0.0" width="808" height="80"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xcK-eL-zk3">
-                                        <rect key="frame" x="532" y="8" width="60" height="64"/>
+                                        <rect key="frame" x="740" y="8" width="60" height="64"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeH-jE-Zft">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="64"/>
@@ -299,10 +301,10 @@
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGD-y5-Kzo">
-                                        <rect key="frame" x="76" y="8" width="448" height="64"/>
+                                        <rect key="frame" x="76" y="8" width="656" height="64"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2rX-Iz-Tkp">
-                                                <rect key="frame" x="8" y="0.0" width="432" height="64"/>
+                                                <rect key="frame" x="8" y="0.0" width="640" height="64"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="op6-Vk-F6b">
                                                     <size key="itemSize" width="106" height="63"/>
@@ -415,25 +417,25 @@
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BhZ-By-hBl">
-                                <rect key="frame" x="0.0" y="80" width="600" height="520"/>
+                                <rect key="frame" x="44" y="80" width="808" height="334"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="DsF-p8-ZhB">
-                                        <rect key="frame" x="12" y="12" width="576" height="496"/>
+                                        <rect key="frame" x="12" y="12" width="784" height="310"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hKo-Il-Eeq">
-                                                <rect key="frame" x="0.0" y="0.0" width="576" height="92"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="784" height="55"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yOj-Hc-iNR" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="67.5" height="55"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBM-0z-euX">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="55"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6K-tb-9Nb">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="55"/>
                                                                 <connections>
                                                                     <action selector="btnKeyboardClick:" destination="CEp-Ns-3iL" eventType="touchUpInside" id="Xfv-gz-w0A"/>
                                                                 </connections>
@@ -466,16 +468,16 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tFb-p2-64M" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="52.5" y="0.0" width="49" height="92"/>
+                                                        <rect key="frame" x="71.5" y="0.0" width="68" height="55"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDB-A2-5OC">
-                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="68" height="55"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9l-ez-apV">
-                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="68" height="55"/>
                                                                 <connections>
                                                                     <action selector="btnKeyboardClick:" destination="CEp-Ns-3iL" eventType="touchUpInside" id="X2V-e7-Ls5"/>
                                                                 </connections>
@@ -508,16 +510,16 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNQ-ky-HEM" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="105.5" y="0.0" width="48.5" height="92"/>
+                                                        <rect key="frame" x="143.5" y="0.0" width="67.5" height="55"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xk-0G-OCP">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="55"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbK-6J-bKL">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="55"/>
                                                                 <connections>
                                                                     <action selector="btnKeyboardClick:" destination="CEp-Ns-3iL" eventType="touchUpInside" id="cJB-pg-gjQ"/>
                                                                 </connections>
@@ -550,16 +552,16 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFT-6o-p2W" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="158" y="0.0" width="49" height="92"/>
+                                                        <rect key="frame" x="215" y="0.0" width="67.5" height="55"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0u-Tk-mbq">
-                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="55"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxj-uW-1q7">
-                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="55"/>
                                                                 <connections>
                                                                     <action selector="btnKeyboardClick:" destination="CEp-Ns-3iL" eventType="touchUpInside" id="Ltf-3C-r77"/>
                                                                 </connections>
@@ -592,16 +594,16 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BnA-Gj-cdz" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="211" y="0.0" width="48.5" height="92"/>
+                                                        <rect key="frame" x="286.5" y="0.0" width="67.5" height="55"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkK-Vk-xaQ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="55"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ly5-sp-e36">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="55"/>
                                                                 <connections>
                                                                     <action selector="btnKeyboardClick:" destination="CEp-Ns-3iL" eventType="touchUpInside" id="ZXQ-JG-XBQ"/>
                                                                 </connections>
@@ -634,16 +636,16 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctJ-8g-Znw" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="263.5" y="0.0" width="49" height="92"/>
+                                                        <rect key="frame" x="358" y="0.0" width="68" height="55"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eT8-AL-VaW">
-                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="68" height="55"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyE-K7-Pym">
-                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="68" height="55"/>
                                                                 <connections>
                                                                     <action selector="btnKeyboardClick:" destination="CEp-Ns-3iL" eventType="touchUpInside" id="s5g-zO-cyu"/>
                                                                 </connections>
@@ -676,16 +678,16 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rct-ew-lPA" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="316.5" y="0.0" width="48.5" height="92"/>
+                                                        <rect key="frame" x="430" y="0.0" width="67.5" height="55"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0E-Ll-EeF">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="55"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOH-Qy-QMM">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="55"/>
                                                                 <connections>
                                                                     <action selector="btnKeyboardClick:" destination="CEp-Ns-3iL" eventType="touchUpInside" id="Sd2-NK-HnZ"/>
                                                                 </connections>
@@ -718,16 +720,16 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jty-4l-dPr" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="369" y="0.0" width="49" height="92"/>
+                                                        <rect key="frame" x="501.5" y="0.0" width="67.5" height="55"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyF-vw-a7d">
-                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="55"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3UZ-vQ-qu3">
-                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="55"/>
                                                                 <connections>
                                                                     <action selector="btnKeyboardClick:" destination="CEp-Ns-3iL" eventType="touchUpInside" id="c9M-uZ-gQ3"/>
                                                                 </connections>
@@ -760,16 +762,16 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FmC-9Z-VTM" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="422" y="0.0" width="48.5" height="92"/>
+                                                        <rect key="frame" x="573" y="0.0" width="67.5" height="55"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6E-lu-fgs">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="55"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plP-Us-u3m">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="55"/>
                                                                 <connections>
                                                                     <action selector="btnKeyboardClick:" destination="CEp-Ns-3iL" eventType="touchUpInside" id="GPe-Cw-I9a"/>
                                                                 </connections>
@@ -802,16 +804,16 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4L-7e-t6A" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="474.5" y="0.0" width="49" height="92"/>
+                                                        <rect key="frame" x="644.5" y="0.0" width="68" height="55"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNd-iD-StZ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="68" height="55"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsh-1i-xCx">
-                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="68" height="55"/>
                                                                 <connections>
                                                                     <action selector="btnKeyboardClick:" destination="CEp-Ns-3iL" eventType="touchUpInside" id="0e8-dR-guT"/>
                                                                 </connections>
@@ -844,16 +846,16 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xgg-Dg-WLC" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="527.5" y="0.0" width="48.5" height="92"/>
+                                                        <rect key="frame" x="716.5" y="0.0" width="67.5" height="55"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RlG-9F-3c6">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="55"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVk-ki-5Nt">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="55"/>
                                                                 <connections>
                                                                     <action selector="btnKeyboardClick:" destination="CEp-Ns-3iL" eventType="touchUpInside" id="cnJ-VK-4YX"/>
                                                                 </connections>
@@ -888,13 +890,13 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="9vX-eZ-Qdx">
-                                                <rect key="frame" x="0.0" y="101" width="576" height="92"/>
+                                                <rect key="frame" x="0.0" y="64" width="784" height="54.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="neS-7N-QOC" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="67.5" height="54.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LjE-8U-Glr">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="54.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="q">
@@ -931,10 +933,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="maU-rL-6n1" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="52.5" y="0.0" width="49" height="92"/>
+                                                        <rect key="frame" x="71.5" y="0.0" width="68" height="54.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9o-5N-hRu">
-                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="68" height="54.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="w">
@@ -971,10 +973,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1qs-a4-OLl" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="105.5" y="0.0" width="48.5" height="92"/>
+                                                        <rect key="frame" x="143.5" y="0.0" width="67.5" height="54.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgU-AW-CB9">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="54.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="e">
@@ -1011,10 +1013,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="str-sA-WJW" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="158" y="0.0" width="49" height="92"/>
+                                                        <rect key="frame" x="215" y="0.0" width="67.5" height="54.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffu-Hz-6x7">
-                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="54.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="r">
@@ -1051,10 +1053,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIy-Jq-JCL" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="211" y="0.0" width="48.5" height="92"/>
+                                                        <rect key="frame" x="286.5" y="0.0" width="67.5" height="54.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6h8-VS-BMc">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="54.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="t">
@@ -1091,10 +1093,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uRb-aT-pOK" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="263.5" y="0.0" width="49" height="92"/>
+                                                        <rect key="frame" x="358" y="0.0" width="68" height="54.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qi6-K4-M2r">
-                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="68" height="54.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="y">
@@ -1131,10 +1133,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJ3-Bm-pSo" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="316.5" y="0.0" width="48.5" height="92"/>
+                                                        <rect key="frame" x="430" y="0.0" width="67.5" height="54.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43n-XE-lTM">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="54.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="u">
@@ -1171,10 +1173,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hHT-YO-WCz" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="369" y="0.0" width="49" height="92"/>
+                                                        <rect key="frame" x="501.5" y="0.0" width="67.5" height="54.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joR-BI-lNi">
-                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="54.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="i">
@@ -1211,10 +1213,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jf8-v8-1iI" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="422" y="0.0" width="48.5" height="92"/>
+                                                        <rect key="frame" x="573" y="0.0" width="67.5" height="54.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3i-bn-lec">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="54.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="o">
@@ -1251,10 +1253,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iuq-VR-DN7" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="474.5" y="0.0" width="49" height="92"/>
+                                                        <rect key="frame" x="644.5" y="0.0" width="68" height="54.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkU-7t-iOz">
-                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="68" height="54.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="p">
@@ -1291,10 +1293,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATC-ZL-vE0" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="527.5" y="0.0" width="48.5" height="92"/>
+                                                        <rect key="frame" x="716.5" y="0.0" width="67.5" height="54.5"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="delete" translatesAutoresizingMaskIntoConstraints="NO" id="vzB-2L-HYd">
-                                                                <rect key="frame" x="10" y="32" width="28" height="28"/>
+                                                                <rect key="frame" x="19.5" y="13" width="28" height="28"/>
                                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="28" id="Gtz-dh-CxL"/>
@@ -1302,7 +1304,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Jm-Ag-uwv">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="54.5"/>
                                                                 <connections>
                                                                     <action selector="btnDeleteFromKeyboard:" destination="CEp-Ns-3iL" eventType="touchUpInside" id="PCp-9q-rcS"/>
                                                                 </connections>
@@ -1335,13 +1337,13 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Gru-cE-g4d">
-                                                <rect key="frame" x="0.0" y="202" width="576" height="92"/>
+                                                <rect key="frame" x="0.0" y="127.5" width="784" height="55"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5J-gW-drc" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="60.5" height="92"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="83.5" height="55"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIL-ar-Akg">
-                                                                <rect key="frame" x="0.0" y="0.0" width="60.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="55"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="a">
@@ -1378,10 +1380,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bZ-6b-9wN" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="64.5" y="0.0" width="60.5" height="92"/>
+                                                        <rect key="frame" x="87.5" y="0.0" width="83.5" height="55"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1P3-H6-t9K">
-                                                                <rect key="frame" x="0.0" y="0.0" width="60.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="55"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="s">
@@ -1418,10 +1420,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjl-q3-adW" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="129" y="0.0" width="60.5" height="92"/>
+                                                        <rect key="frame" x="175" y="0.0" width="83.5" height="55"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVJ-kQ-Ew4">
-                                                                <rect key="frame" x="0.0" y="0.0" width="60.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="55"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="d">
@@ -1458,10 +1460,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5p-x9-SUa" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="193.5" y="0.0" width="60.5" height="92"/>
+                                                        <rect key="frame" x="262.5" y="0.0" width="83.5" height="55"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwm-B8-ct6">
-                                                                <rect key="frame" x="0.0" y="0.0" width="60.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="55"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="f">
@@ -1498,10 +1500,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3C9-2C-0QP" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="258" y="0.0" width="60" height="92"/>
+                                                        <rect key="frame" x="350" y="0.0" width="84" height="55"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUo-TF-8An">
-                                                                <rect key="frame" x="0.0" y="0.0" width="60" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="84" height="55"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="g">
@@ -1538,10 +1540,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1g4-PX-Vbk" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="322" y="0.0" width="60.5" height="92"/>
+                                                        <rect key="frame" x="438" y="0.0" width="83.5" height="55"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="27" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMv-U5-toe">
-                                                                <rect key="frame" x="0.0" y="0.0" width="60.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="55"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="h">
@@ -1578,10 +1580,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r34-rc-cS3" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="386.5" y="0.0" width="60.5" height="92"/>
+                                                        <rect key="frame" x="525.5" y="0.0" width="83.5" height="55"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="28" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wku-Vf-dnv">
-                                                                <rect key="frame" x="0.0" y="0.0" width="60.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="55"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="j">
@@ -1618,10 +1620,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3H-Az-qQw" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="451" y="0.0" width="60.5" height="92"/>
+                                                        <rect key="frame" x="613" y="0.0" width="83.5" height="55"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="29" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yec-Sl-JqS">
-                                                                <rect key="frame" x="0.0" y="0.0" width="60.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="55"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="k">
@@ -1658,10 +1660,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUP-yD-iTV" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="515.5" y="0.0" width="60.5" height="92"/>
+                                                        <rect key="frame" x="700.5" y="0.0" width="83.5" height="55"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zd5-B5-t27">
-                                                                <rect key="frame" x="0.0" y="0.0" width="60.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="55"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="l">
@@ -1700,13 +1702,13 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="UdH-2W-Kpo">
-                                                <rect key="frame" x="0.0" y="303" width="576" height="92"/>
+                                                <rect key="frame" x="0.0" y="191.5" width="784" height="54.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFz-yP-HIc" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="67.5" height="54.5"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="up-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="8xs-nO-jZh">
-                                                                <rect key="frame" x="10.5" y="32" width="28" height="28"/>
+                                                                <rect key="frame" x="20" y="13.5" width="28" height="28"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="28" id="hhk-UV-iKX"/>
@@ -1714,7 +1716,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNK-YL-kmW">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="54.5"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <connections>
                                                                     <action selector="btnShiftClick:" destination="CEp-Ns-3iL" eventType="touchUpInside" id="ClF-lR-fUL"/>
@@ -1746,10 +1748,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bUU-C2-9wY" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="52.5" y="0.0" width="49" height="92"/>
+                                                        <rect key="frame" x="71.5" y="0.0" width="68" height="54.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRb-f5-SVO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="68" height="54.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="z">
@@ -1786,10 +1788,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iq3-vp-MQN" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="105.5" y="0.0" width="48.5" height="92"/>
+                                                        <rect key="frame" x="143.5" y="0.0" width="67.5" height="54.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJs-6o-4v2">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="54.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="x">
@@ -1826,10 +1828,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9x-Ha-lEu" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="158" y="0.0" width="49" height="92"/>
+                                                        <rect key="frame" x="215" y="0.0" width="67.5" height="54.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="34" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VxI-N5-GjO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="54.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="c">
@@ -1866,10 +1868,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LYk-LM-h08" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="211" y="0.0" width="48.5" height="92"/>
+                                                        <rect key="frame" x="286.5" y="0.0" width="67.5" height="54.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="35" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRq-DE-Lov">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="54.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="v">
@@ -1906,10 +1908,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xCZ-b5-aKE" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="263.5" y="0.0" width="49" height="92"/>
+                                                        <rect key="frame" x="358" y="0.0" width="68" height="54.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="36" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcd-9Q-Hdr">
-                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="68" height="54.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="b">
@@ -1946,10 +1948,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibf-bU-Wt3" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="316.5" y="0.0" width="48.5" height="92"/>
+                                                        <rect key="frame" x="430" y="0.0" width="67.5" height="54.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="37" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2b-yj-0jt">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="54.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="n">
@@ -1986,10 +1988,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cio-VU-len" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="369" y="0.0" width="49" height="92"/>
+                                                        <rect key="frame" x="501.5" y="0.0" width="67.5" height="54.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="38" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hlv-Xc-mwq">
-                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="54.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="m">
@@ -2026,16 +2028,16 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Yw-ZI-AwE" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="422" y="0.0" width="48.5" height="92"/>
+                                                        <rect key="frame" x="573" y="0.0" width="67.5" height="54.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="! / , " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Gg-lt-L3o">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="54.5"/>
                                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" tag="39" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6M9-5I-91P">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="54.5"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <connections>
                                                                     <action selector="btnKeyboardClick:" destination="CEp-Ns-3iL" eventType="touchUpInside" id="Pmt-R6-Ue2"/>
@@ -2069,16 +2071,16 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZo-35-KgP" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="474.5" y="0.0" width="49" height="92"/>
+                                                        <rect key="frame" x="644.5" y="0.0" width="68" height="54.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="? / ." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQY-DN-Dop">
-                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="68" height="54.5"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zum-jL-8e8">
-                                                                <rect key="frame" x="0.0" y="0.0" width="49" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="68" height="54.5"/>
                                                                 <connections>
                                                                     <action selector="btnKeyboardClick:" destination="CEp-Ns-3iL" eventType="touchUpInside" id="73v-PA-cy4"/>
                                                                 </connections>
@@ -2111,10 +2113,10 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vLe-pq-KsH" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="527.5" y="0.0" width="48.5" height="92"/>
+                                                        <rect key="frame" x="716.5" y="0.0" width="67.5" height="54.5"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="up-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="N90-ta-Mg3">
-                                                                <rect key="frame" x="10" y="32" width="28" height="28"/>
+                                                                <rect key="frame" x="19.5" y="13.5" width="28" height="28"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="28" id="4AW-Ev-rzx"/>
@@ -2122,7 +2124,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CR-22-7Hz">
-                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="54.5"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <connections>
                                                                     <action selector="btnShiftClick:" destination="CEp-Ns-3iL" eventType="touchUpInside" id="qJY-FQ-5Sc"/>
@@ -2156,13 +2158,13 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="skf-ZO-L58">
-                                                <rect key="frame" x="0.0" y="404" width="576" height="92"/>
+                                                <rect key="frame" x="0.0" y="255" width="784" height="55"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0F0-Wr-eGX" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="576" height="92"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="784" height="55"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLT-TI-Vce">
-                                                                <rect key="frame" x="0.0" y="0.0" width="576" height="92"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="784" height="55"/>
                                                                 <connections>
                                                                     <action selector="btnSpaceClick:" destination="CEp-Ns-3iL" eventType="touchUpInside" id="yLr-v2-2hT"/>
                                                                 </connections>
@@ -2290,24 +2292,24 @@
             <objects>
                 <viewController storyboardIdentifier="AddChoiceVC" id="tSh-mS-T7S" customClass="AddChoiceVC" customModule="JoackyWriter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3IR-Z2-U7R">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUg-te-uff">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="0.0"/>
+                                <rect key="frame" x="44" y="0.0" width="808" height="0.0"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="O6K-x1-Jet"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="tF0-44-MvT">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="44" y="0.0" width="808" height="393"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0m-Yd-fMw" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="600"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="363.5" height="393"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fo6-hG-ilr" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="200" width="200" height="200"/>
+                                                <rect key="frame" x="82" y="76.5" width="200" height="200"/>
                                                 <subviews>
                                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder" translatesAutoresizingMaskIntoConstraints="NO" id="64S-NW-uC8">
                                                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
@@ -2347,7 +2349,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="stB-0v-2Id" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                <rect key="frame" x="-1" y="179" width="42" height="42"/>
+                                                <rect key="frame" x="61" y="55.5" width="42" height="42"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHJ-j0-5Wf">
                                                         <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
@@ -2383,7 +2385,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhv-gH-Zpx" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                <rect key="frame" x="199" y="379" width="42" height="42"/>
+                                                <rect key="frame" x="261" y="255.5" width="42" height="42"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2z-IM-w9q">
                                                         <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
@@ -2419,7 +2421,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0za-lA-nCu">
-                                                <rect key="frame" x="239" y="8" width="1" height="584"/>
+                                                <rect key="frame" x="362.5" y="8" width="1" height="377"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="1" id="zSa-hE-3dL"/>
@@ -2428,15 +2430,74 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="bIl-KW-8nZ">
+                                                <rect key="frame" x="8" y="313" width="346.5" height="72"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xWt-vU-Xfy">
+                                                        <rect key="frame" x="0.0" y="0.0" width="346.5" height="30"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHC-Kq-dJh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="nl9-tA-3af"/>
+                                                                    <constraint firstAttribute="width" constant="30" id="qKf-al-kRI"/>
+                                                                </constraints>
+                                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" image="ic_unchecked">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <state key="selected" image="ic_checked"/>
+                                                                <connections>
+                                                                    <action selector="btnAddToiWatch:" destination="tSh-mS-T7S" eventType="touchUpInside" id="bNk-6m-FHk"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add To iWatch Only" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awF-Pq-mM4">
+                                                                <rect key="frame" x="38" y="0.0" width="308.5" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="G6A-0j-aqv">
+                                                        <rect key="frame" x="0.0" y="42" width="346.5" height="30"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQG-oF-Gsy">
+                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="Ixc-fc-x6i"/>
+                                                                    <constraint firstAttribute="width" constant="30" id="Vfm-zV-rpI"/>
+                                                                </constraints>
+                                                                <state key="normal" image="ic_unchecked">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <state key="selected" image="ic_checked"/>
+                                                                <connections>
+                                                                    <action selector="btnAddToBoth:" destination="tSh-mS-T7S" eventType="touchUpInside" id="b1L-cQ-iHi"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add To Both iWatch as well as App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3PD-8X-259">
+                                                                <rect key="frame" x="38" y="0.0" width="308.5" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="uhv-gH-Zpx" firstAttribute="bottom" secondItem="fo6-hG-ilr" secondAttribute="bottom" constant="21" id="6aP-0b-Zx3"/>
                                             <constraint firstItem="stB-0v-2Id" firstAttribute="top" secondItem="fo6-hG-ilr" secondAttribute="top" constant="-21" id="Bef-5a-Y5e"/>
-                                            <constraint firstItem="fo6-hG-ilr" firstAttribute="centerY" secondItem="g0m-Yd-fMw" secondAttribute="centerYWithinMargins" id="ULG-Dz-P4B"/>
+                                            <constraint firstItem="0za-lA-nCu" firstAttribute="leading" secondItem="bIl-KW-8nZ" secondAttribute="trailing" constant="8" id="C3R-Hw-48C"/>
+                                            <constraint firstAttribute="bottom" secondItem="bIl-KW-8nZ" secondAttribute="bottom" constant="8" id="TRn-XY-raA"/>
+                                            <constraint firstItem="fo6-hG-ilr" firstAttribute="centerY" secondItem="g0m-Yd-fMw" secondAttribute="centerYWithinMargins" constant="-20" id="ULG-Dz-P4B"/>
                                             <constraint firstAttribute="bottom" secondItem="0za-lA-nCu" secondAttribute="bottom" constant="8" id="UX0-Mx-rX4"/>
                                             <constraint firstItem="fo6-hG-ilr" firstAttribute="centerX" secondItem="g0m-Yd-fMw" secondAttribute="centerX" id="Uqv-qb-5IR"/>
                                             <constraint firstItem="0za-lA-nCu" firstAttribute="top" secondItem="g0m-Yd-fMw" secondAttribute="top" constant="8" id="VDP-gt-JWr"/>
+                                            <constraint firstItem="bIl-KW-8nZ" firstAttribute="leading" secondItem="g0m-Yd-fMw" secondAttribute="leading" constant="8" id="XSt-w0-f88"/>
                                             <constraint firstItem="uhv-gH-Zpx" firstAttribute="trailing" secondItem="fo6-hG-ilr" secondAttribute="trailing" constant="21" id="aQO-wR-ml8"/>
                                             <constraint firstItem="stB-0v-2Id" firstAttribute="leading" secondItem="fo6-hG-ilr" secondAttribute="leading" constant="-21" id="iNW-qG-z7e"/>
                                             <constraint firstAttribute="trailing" secondItem="0za-lA-nCu" secondAttribute="trailing" id="l1q-ZY-nFG"/>
@@ -2454,13 +2515,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y2z-YZ-D9t">
-                                        <rect key="frame" x="240" y="0.0" width="360" height="600"/>
+                                        <rect key="frame" x="363.5" y="0.0" width="444.5" height="393"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOm-S8-c2U" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="20" width="344" height="52"/>
+                                                <rect key="frame" x="8" y="20" width="428.5" height="52"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Z3-uN-9M1">
-                                                        <rect key="frame" x="8" y="8" width="328" height="36"/>
+                                                        <rect key="frame" x="8" y="8" width="412.5" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -2489,10 +2550,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="plo-wP-R58" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="84" width="344" height="52"/>
+                                                <rect key="frame" x="8" y="84" width="428.5" height="52"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zkt-NG-0dV" customClass="WaveformLiveView" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="87.5" y="8" width="120.5" height="36"/>
+                                                        <rect key="frame" x="87.5" y="8" width="205" height="36"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speak As" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nj6-8X-nW9">
@@ -2502,7 +2563,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkl-aT-h9W">
-                                                        <rect key="frame" x="304" y="10" width="32" height="32"/>
+                                                        <rect key="frame" x="388.5" y="10" width="32" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="32" id="Sjv-yr-6ox"/>
                                                             <constraint firstAttribute="width" constant="32" id="xGn-8K-E6k"/>
@@ -2513,7 +2574,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ru4-Sd-rGT">
-                                                        <rect key="frame" x="260" y="10" width="32" height="32"/>
+                                                        <rect key="frame" x="344.5" y="10" width="32" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="32" id="fK9-IU-Ehs"/>
                                                             <constraint firstAttribute="width" constant="32" id="fgR-TA-gxC"/>
@@ -2525,7 +2586,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHq-nK-Hgb">
-                                                        <rect key="frame" x="216" y="10" width="32" height="32"/>
+                                                        <rect key="frame" x="300.5" y="10" width="32" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="32" id="5fU-Vf-dJB"/>
                                                             <constraint firstAttribute="width" constant="32" id="mgz-iz-B54"/>
@@ -2565,7 +2626,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAL-Z6-tP3" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="148" width="344" height="52"/>
+                                                <rect key="frame" x="8" y="148" width="428.5" height="52"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzs-34-fVn">
                                                         <rect key="frame" x="8" y="16" width="82.5" height="20.5"/>
@@ -2574,7 +2635,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vba-tW-tQt">
-                                                        <rect key="frame" x="304" y="10" width="32" height="32"/>
+                                                        <rect key="frame" x="388.5" y="10" width="32" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="32" id="BY2-EO-ysi"/>
                                                             <constraint firstAttribute="width" constant="32" id="OKM-fb-qbE"/>
@@ -2634,7 +2695,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="word forms - e.g. Plural, past tense, future tense." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="81L-Oh-yeQ">
-                                                        <rect key="frame" x="230.5" y="9" width="65.5" height="34"/>
+                                                        <rect key="frame" x="230.5" y="9" width="150" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -2667,7 +2728,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VkY-aN-ia3" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="212" width="344" height="52"/>
+                                                <rect key="frame" x="8" y="212" width="428.5" height="52"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JdF-EX-5Ok">
                                                         <rect key="frame" x="8" y="16" width="50" height="20.5"/>
@@ -2679,13 +2740,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vwd-3Q-0kH">
-                                                        <rect key="frame" x="66" y="8" width="270" height="36"/>
+                                                        <rect key="frame" x="66" y="8" width="354.5" height="36"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q6P-fS-p0R" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="23" height="36"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="32.5" height="36"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27E-Pt-l7W">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="23" height="36"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="32.5" height="36"/>
                                                                         <connections>
                                                                             <action selector="btnColorsPressed:" destination="tSh-mS-T7S" eventType="touchUpInside" id="PAV-AN-NNd"/>
                                                                         </connections>
@@ -2705,10 +2766,10 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKq-VA-nXO" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                                <rect key="frame" x="31" y="0.0" width="23" height="36"/>
+                                                                <rect key="frame" x="40.5" y="0.0" width="32" height="36"/>
                                                                 <subviews>
                                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMv-A6-K2d">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="23" height="36"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="32" height="36"/>
                                                                         <connections>
                                                                             <action selector="btnColorsPressed:" destination="tSh-mS-T7S" eventType="touchUpInside" id="cFl-pF-r5t"/>
                                                                         </connections>
@@ -2728,10 +2789,10 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NFK-d7-3Zz" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                                <rect key="frame" x="62" y="0.0" width="22.5" height="36"/>
+                                                                <rect key="frame" x="80.5" y="0.0" width="32.5" height="36"/>
                                                                 <subviews>
                                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bA-wf-jFj">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="22.5" height="36"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="32.5" height="36"/>
                                                                         <connections>
                                                                             <action selector="btnColorsPressed:" destination="tSh-mS-T7S" eventType="touchUpInside" id="zj5-WB-enA"/>
                                                                         </connections>
@@ -2751,10 +2812,10 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2K-eO-RBo" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                                <rect key="frame" x="92.5" y="0.0" width="23" height="36"/>
+                                                                <rect key="frame" x="121" y="0.0" width="32" height="36"/>
                                                                 <subviews>
                                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQu-F0-Nh2">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="23" height="36"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="32" height="36"/>
                                                                         <connections>
                                                                             <action selector="btnColorsPressed:" destination="tSh-mS-T7S" eventType="touchUpInside" id="3A0-h0-NMv"/>
                                                                         </connections>
@@ -2774,10 +2835,10 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E2l-iV-iid" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                                <rect key="frame" x="123.5" y="0.0" width="23" height="36"/>
+                                                                <rect key="frame" x="161" y="0.0" width="32.5" height="36"/>
                                                                 <subviews>
                                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFF-Yx-vzE">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="23" height="36"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="32.5" height="36"/>
                                                                         <connections>
                                                                             <action selector="btnColorsPressed:" destination="tSh-mS-T7S" eventType="touchUpInside" id="5VA-0b-0P5"/>
                                                                         </connections>
@@ -2797,10 +2858,10 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAB-w7-ivO" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                                <rect key="frame" x="154.5" y="0.0" width="23" height="36"/>
+                                                                <rect key="frame" x="201.5" y="0.0" width="32" height="36"/>
                                                                 <subviews>
                                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goU-Qp-GrJ">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="23" height="36"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="32" height="36"/>
                                                                         <connections>
                                                                             <action selector="btnColorsPressed:" destination="tSh-mS-T7S" eventType="touchUpInside" id="QOD-iV-L9D"/>
                                                                         </connections>
@@ -2820,10 +2881,10 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8E-z7-BlJ" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                                <rect key="frame" x="185.5" y="0.0" width="22.5" height="36"/>
+                                                                <rect key="frame" x="241.5" y="0.0" width="32.5" height="36"/>
                                                                 <subviews>
                                                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AuB-NL-Q7N">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="22.5" height="36"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="32.5" height="36"/>
                                                                         <connections>
                                                                             <action selector="btnColorsPressed:" destination="tSh-mS-T7S" eventType="touchUpInside" id="xAH-rO-M6n"/>
                                                                         </connections>
@@ -2843,10 +2904,10 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LM6-CN-Ce3" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                                <rect key="frame" x="216" y="0.0" width="23" height="36"/>
+                                                                <rect key="frame" x="282" y="0.0" width="32" height="36"/>
                                                                 <subviews>
                                                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xk-am-dHR">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="23" height="36"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="32" height="36"/>
                                                                         <connections>
                                                                             <action selector="btnColorsPressed:" destination="tSh-mS-T7S" eventType="touchUpInside" id="lpO-Xm-Z6v"/>
                                                                         </connections>
@@ -2866,13 +2927,13 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yTu-iw-IrZ" customClass="RoundableView" customModule="JoackyWriter" customModuleProvider="target">
-                                                                <rect key="frame" x="247" y="0.0" width="23" height="36"/>
+                                                                <rect key="frame" x="322" y="0.0" width="32.5" height="36"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close-2" translatesAutoresizingMaskIntoConstraints="NO" id="GzA-aH-eSt">
-                                                                        <rect key="frame" x="4" y="4" width="15" height="28"/>
+                                                                        <rect key="frame" x="4" y="4" width="24.5" height="28"/>
                                                                     </imageView>
                                                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifa-ch-xz1">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="23" height="36"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="32.5" height="36"/>
                                                                         <connections>
                                                                             <action selector="btnColorsPressed:" destination="tSh-mS-T7S" eventType="touchUpInside" id="OTU-Yb-oaG"/>
                                                                         </connections>
@@ -2924,10 +2985,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="N38-Jx-Y2x">
-                                                <rect key="frame" x="8" y="276" width="344" height="42"/>
+                                                <rect key="frame" x="8" y="276" width="428.5" height="42"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moP-bA-Tx1" customClass="RoundableButton" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="166" height="42"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="208.5" height="42"/>
                                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="CANCEL">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2948,7 +3009,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPx-yY-SmV" customClass="RoundableButton" customModule="JoackyWriter" customModuleProvider="target">
-                                                        <rect key="frame" x="178" y="0.0" width="166" height="42"/>
+                                                        <rect key="frame" x="220.5" y="0.0" width="208" height="42"/>
                                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                                         <state key="normal" title="SAVE">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3006,7 +3067,7 @@
                             <constraint firstItem="IUg-te-uff" firstAttribute="leading" secondItem="K5e-ve-XgB" secondAttribute="leading" id="Adp-Wj-kRj"/>
                             <constraint firstItem="tF0-44-MvT" firstAttribute="leading" secondItem="K5e-ve-XgB" secondAttribute="leading" id="FIr-Af-bXj"/>
                             <constraint firstItem="K5e-ve-XgB" firstAttribute="bottom" secondItem="tF0-44-MvT" secondAttribute="bottom" id="JL1-ui-9cD"/>
-                            <constraint firstItem="g0m-Yd-fMw" firstAttribute="width" secondItem="IUg-te-uff" secondAttribute="width" multiplier="0.4" id="PDg-1q-v1l"/>
+                            <constraint firstItem="g0m-Yd-fMw" firstAttribute="width" secondItem="IUg-te-uff" secondAttribute="width" multiplier="0.45" id="PDg-1q-v1l"/>
                             <constraint firstItem="K5e-ve-XgB" firstAttribute="trailing" secondItem="tF0-44-MvT" secondAttribute="trailing" id="U82-pc-VvA"/>
                             <constraint firstItem="tF0-44-MvT" firstAttribute="top" secondItem="IUg-te-uff" secondAttribute="bottom" id="xS0-nL-Ouq"/>
                             <constraint firstItem="K5e-ve-XgB" firstAttribute="trailing" secondItem="IUg-te-uff" secondAttribute="trailing" id="zIS-Pa-QIq"/>
@@ -3014,6 +3075,8 @@
                     </view>
                     <connections>
                         <outlet property="btnAddMoreWords" destination="Vba-tW-tQt" id="UaP-gb-lvT"/>
+                        <outlet property="btnAddToBoth" destination="vQG-oF-Gsy" id="pHq-xv-Dlr"/>
+                        <outlet property="btnAddToiWatch" destination="XHC-Kq-dJh" id="nYj-da-xI9"/>
                         <outlet property="btnDeleteRecord" destination="pkl-aT-h9W" id="wYa-rm-enF"/>
                         <outlet property="btnPlay" destination="UHq-nK-Hgb" id="y4X-59-0bF"/>
                         <outlet property="btnRecord" destination="ru4-Sd-rGT" id="FpU-01-bsN"/>
@@ -3024,6 +3087,7 @@
                         <outlet property="tfWorkType" destination="bV8-aT-SyV" id="9gm-NV-rr9"/>
                         <outlet property="vwBgImg" destination="64S-NW-uC8" id="1wA-jy-t23"/>
                         <outlet property="vwImageBg" destination="fo6-hG-ilr" id="jh7-Xq-wFv"/>
+                        <outlet property="vwStackAddToiWatch" destination="bIl-KW-8nZ" id="Gyy-Pt-fwY"/>
                         <outlet property="waveformView" destination="Zkt-NG-0dV" id="TYX-nd-Bac"/>
                     </connections>
                 </viewController>
@@ -3032,6 +3096,17 @@
             <point key="canvasLocation" x="-275.390625" y="785.15625"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="XPx-yY-SmV">
+            <size key="intrinsicContentSize" width="37" height="30"/>
+        </designable>
+        <designable name="moP-bA-Tx1">
+            <size key="intrinsicContentSize" width="59" height="30"/>
+        </designable>
+        <designable name="pAo-5w-qml">
+            <size key="intrinsicContentSize" width="704" height="20"/>
+        </designable>
+    </designables>
     <resources>
         <image name="amplifier" width="42.666667938232422" height="42.666667938232422"/>
         <image name="back-arrow" width="42.666667938232422" height="42.666667938232422"/>
@@ -3042,8 +3117,10 @@
         <image name="edit" width="42.666667938232422" height="42.666667938232422"/>
         <image name="folder" width="170.66667175292969" height="134"/>
         <image name="home" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="ic_checked" width="170.66667175292969" height="170.66667175292969"/>
         <image name="ic_delete" width="42.666667938232422" height="42.666667938232422"/>
         <image name="ic_select" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="ic_unchecked" width="170.66667175292969" height="170.66667175292969"/>
         <image name="keyboard" width="42.666667938232422" height="42.666667938232422"/>
         <image name="pen" width="170.66667175292969" height="170.66667175292969"/>
         <image name="photo-camera" width="170.66667175292969" height="170.66667175292969"/>

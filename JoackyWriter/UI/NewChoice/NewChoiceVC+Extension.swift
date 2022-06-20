@@ -105,7 +105,7 @@ extension NewChoiceVC : UICollectionViewDataSource, UICollectionViewDelegate, UI
             if model.strImageName.isEmpty{
                 let height = collectionView.contentSize.height
                 let text = model.strCaption
-                let width = text.width(withConstrainedHeight: height, font: UIFont.boldSystemFont(ofSize:UIDevice.current.userInterfaceIdiom == .pad ? 24 : 18)) + 8
+                let width = text.width(withConstrainedHeight: height, font: UIFont.boldSystemFont(ofSize: UIDevice.current.userInterfaceIdiom == .pad ? 24 : 18)) + 8
                 return CGSize(width: width , height: height)
             }
             
